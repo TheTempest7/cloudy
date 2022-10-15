@@ -27,27 +27,36 @@ export default function Items(props) {
 
 
     useEffect(() => {
-
         if (props.data) {
-            reactotron.log(55555555555555555555);
             reactotron.log(props);
-            reactotron.log(55555555555555555555);
             let data = Object.values(props.data);
             setSt1(props.data);
-            reactotron.log(props.data);
-
             circle(data);
         }
     }, [])
 
 
 
-    return (<View>
-        <Text >Items</Text>
-        <FlatList data={values} renderItem={({ item }) => (
+    return (<View style={styles.container}>
+        <Text style={styles.text} >Tap an eye to see details</Text>
+        <FlatList showsVerticalScrollIndicator={false} style={styles.fatherList} data={values} renderItem={({ item }) => (
             <OneOf resent={props.resent} status={props.status} nav={props.nav} el={item} />
         )} />
     </View>
     )
 
 }
+
+
+const styles = StyleSheet.create({
+    container: {
+        paddingHorizontal: 35,
+        backgroundColor: '#6DA4CD'
+    },
+    text: {
+        color: '#FFF',
+        paddingVertical: 15,
+        fontFamily: 'Dosis-Medium',
+        fontSize: 20
+    }
+});

@@ -55,7 +55,7 @@ export default function Quotation(props) {
 
     return (
         <View style={styles.container}>
-            <Table borderStyle={{ borderWidth: 1 }}>
+            <Table borderStyle={{ borderWidth: 1, borderColor: '#FFF' }}>
                 <TableWrapper style={styles.wrapper}>
                     <Rows data={tableData} flexArr={[1, 1]} style={styles.row} textStyle={styles.text} />
                 </TableWrapper>
@@ -66,10 +66,10 @@ export default function Quotation(props) {
 }
 
 const styles = StyleSheet.create({
-    container: { flex: 1, padding: 16, paddingTop: 30, backgroundColor: '#fff' },
+    container: { flex: 1, padding: 16, paddingTop: 30, backgroundColor: '#6DA4CD' },
     head: { height: 40, backgroundColor: '#f1f8ff' },
     wrapper: { flexDirection: 'row' },
     title: { flex: 1, backgroundColor: '#f6f8fa' },
     row: { height: 28 },
-    text: { textAlign: 'center' }
+    text: { textAlign: 'center', color: '#4b0082', fontFamily: 'Dosis-Regular' }
 });
